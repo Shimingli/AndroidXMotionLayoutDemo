@@ -2,6 +2,7 @@ package com.lsm.androidx.weight;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import com.google.android.material.appbar.AppBarLayout;
 
@@ -10,6 +11,7 @@ import androidx.constraintlayout.motion.widget.MotionLayout;
 /**
  * <p>
  * 自定义MotionLayout和 AppBarLayout互相结合着使用
+ * 这种自定义空控件的方法很有意思
  * </p>
  *
  * @author shiming
@@ -24,8 +26,6 @@ public class CollapsibleToolbar extends MotionLayout implements AppBarLayout.OnO
 
     public CollapsibleToolbar(Context context, AttributeSet attrs) {
         super(context, attrs);
-
-
     }
 
     /**
@@ -40,9 +40,17 @@ public class CollapsibleToolbar extends MotionLayout implements AppBarLayout.OnO
         }
     }
 
+    /**
+     * 接口中的方法
+     * @param appBarLayout appBarLayout对象
+     * @param verticalOffset 偏移量，手机屏幕往下滚动的话，这个为负数  在最顶部的时候， verticalOffset为 0
+     */
     @Override
     public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-        //设置进度在哪里
+        //设置MotionLayout 进度在哪里
         setProgress((float)-verticalOffset/appBarLayout.getTotalScrollRange());
+        Log.d("CollapsibleToolbar","appBarLayout.getTotalScrollRange()="+appBarLayout.getTotalScrollRange());
+        Log.d("CollapsibleToolbar","verticalOffset="+verticalOffset);
+
     }
 }

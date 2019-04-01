@@ -13,7 +13,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<com.google.androidstudio.motionlayoutexample.utils.CollapsibleToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<com.lsm.androidx.weight.CollapsibleToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/motionLayout"
     app:layoutDescription="@xml/scene_10_header"
@@ -37,17 +38,17 @@
         android:layout_height="wrap_content"
         android:transformPivotX="0dp"
         android:transformPivotY="0dp"
-        android:text="Monterey"
+        android:text="你好呀"
         android:textColor="#FFF"
-        android:textSize="32dp" />
+        android:textSize="32sp" />
 
     <TextView
         android:id="@+id/sublabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="California"
+        android:text="shiming"
         android:textColor="#FFF"
         android:textSize="24sp"
         app:fontFamily="cursive" />
 
-</com.google.androidstudio.motionlayoutexample.utils.CollapsibleToolbar>
+</com.lsm.androidx.weight.CollapsibleToolbar>

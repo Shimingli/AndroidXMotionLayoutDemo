@@ -28,6 +28,7 @@
             motion:dragDirection="dragUp" />
 
         <ConstraintSet android:id="@+id/start">
+            <!--background 对面的imageView控件。然后呢，这个是个透明度的变化，和放大      android:alpha="1.0" 透明度为1 完全看不见-->
             <Constraint
                 android:id="@+id/background"
                 android:layout_width="match_parent"
@@ -36,6 +37,7 @@
                 android:scaleX="1.1"
                 android:scaleY="1.1"
                 motion:layout_constraintBottom_toBottomOf="parent"/>
+            <!-- label 旋转起来-->
             <Constraint
                 android:id="@+id/label"
                 android:layout_width="wrap_content"
@@ -45,6 +47,9 @@
                 android:alpha="0.6"
                 motion:layout_constraintBottom_toBottomOf="@+id/background"
                 motion:layout_constraintStart_toStartOf="parent"/>
+            <!--layout_constraintBaseline_toBaselineOf 我个人理解就是这个文字要和 label 这一行在同一行
+             layout_constraint（本组件的部位）_to（建立连接的组件部位）Of：（建立连接的id）
+             -->
             <Constraint
                 android:id="@+id/sublabel"
                 android:layout_width="wrap_content"
@@ -55,6 +60,7 @@
         </ConstraintSet>
 
         <ConstraintSet android:id="@+id/end">
+            <!--      android:alpha="0" 完全看得见 -->
             <Constraint
                 android:id="@id/background"
                 android:layout_width="match_parent"
@@ -72,6 +78,7 @@
                 android:rotation="0.0"
                 motion:layout_constraintBottom_toBottomOf="@+id/background"
                 motion:layout_constraintStart_toStartOf="parent" />
+            <!--可以把它注释掉 ，就是把它位置设置了-->
             <Constraint
                 android:id="@id/sublabel"
                 android:layout_width="wrap_content"

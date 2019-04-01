@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <com.lsm.androidx.weight.CollapsibleToolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,15 +9,15 @@
     android:minHeight="50dp"
     android:fitsSystemWindows="false"
     app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
-
+   <!--background 控件在scene-09 中设置了透明度-->
     <ImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:background="@color/colorAccent"
         android:scaleType="centerCrop"
         android:src="@mipmap/wechat"/>
-
+   <!--label 这个控件的动画 是在scene_09 中控制的-->
     <TextView
         android:id="@+id/label"
         android:layout_width="wrap_content"
@@ -27,6 +26,6 @@
         android:transformPivotY="0dp"
         android:text="你好啊"
         android:textColor="#FFF"
-        android:textSize="32dp" />
+        android:textSize="32sp" />
 
 </com.lsm.androidx.weight.CollapsibleToolbar>
