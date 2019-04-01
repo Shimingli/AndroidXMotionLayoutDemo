@@ -3,4 +3,18 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="clr_00FF95">#00FF95</color>
+    <color name="clr_003BFF">#003BFF</color>
+    <color name="clr_FBFF00">#FBFF00</color>
+    <color name="clr_C800FF">#C800FF</color>
+    <color name="clr_FF6600">#FF6600</color>
+    <color name="clr_00DB07">#00DB07</color>
+    <color name="clr_0084DB">#0084DB</color>
+    <color name="clr_5800DB">#5800DB</color>
+    <color name="clr_BD24FF">#BD24FF</color>
+    <color name="clr_FF24CC">#FF24CC</color>
+    <color name="clr_FF2491">#FF2491</color>
+    <color name="clr_FF243D">#FF243D</color>
+
+
 </resources>

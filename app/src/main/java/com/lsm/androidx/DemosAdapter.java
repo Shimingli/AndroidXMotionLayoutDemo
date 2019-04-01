@@ -70,6 +70,9 @@ public class DemosAdapter extends RecyclerView.Adapter<DemosAdapter.ViewHolder> 
                      }
                 }
             });
+
+
+
         }
     }
 

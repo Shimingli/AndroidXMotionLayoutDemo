@@ -25,20 +25,49 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         initView();
         ArrayList<AdapterItemBean> adapterItemBeans = new ArrayList<>();
+        //左右移动 ，然后慢慢的滚回到远点
         adapterItemBeans.add(new AdapterItemBean("基本示例（1/2）","使用引用的ConstraintLayout文件的基本运动示例",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("基本示例（2/2）","使用在MotionScene文件中定义的约束集的基本运动示例",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("自定义属性","显示颜色插值（自定义属性）",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("imagefilterview（1/2）","显示图像交叉淡入度（使用ml的imagefilterview+自定义属性）",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("imagefilterview（2/2）","显示图像饱和度转换（使用ml的imagefilterview+自定义属性）",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("关键帧位置（1/3）","使用简单的关键帧更改插值运动",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("关键帧插值（2/3）","更复杂的关键帧，添加旋转插值",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("关键帧周期（3/3）","使用关键帧周期的基本示例",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("coordinatorlayout示例（1/3）","使用motion layout而不是appbarlayout的基本示例",R.layout.motion_01_basic));
+        // 左右移动，另外的一种的实现的方式 ，可以改变小球的大小
+        adapterItemBeans.add(new AdapterItemBean("基本示例（2/2）","使用在MotionScene文件中定义的约束集的基本运动示例",R.layout.motion_02_basic));
+        //左右移动，颜色渐变，大小渐变，在中间，我个人感觉是两个颜色的重叠，注意在布局中的颜色其实设置没有什么作用
+        adapterItemBeans.add(new AdapterItemBean("自定义属性","显示颜色插值（自定义属性）",R.layout.motion_03_custom_attribute));
+        //使用IamgeFilterView 两张图片的重合，左右滑动，可以不断的切换图片 在两张图片之间做的淡入淡出 (cross-fade) 效果
+        adapterItemBeans.add(new AdapterItemBean("ImageFilterView（1/2）","显示图像交叉淡入度（使用ml的imagefilterview+自定义属性）",R.layout.motion_04_imagefilter));
+        // ImageFilterView 也提供了更多的功能:饱和度
+        // saturation : 0 = grayscale, 1 = original, 2 = hyper
+        // saturated
+        //对比度    contrast : 1 = unchanged, 0 = gray, 2 = high contrast
+        //色温       warmth : 1 = neutral, 2 = warm (red tint), 0.5 = cold (blue tint)
+        //淡入淡出   crossfade (with app:altSrc)
+        // Saturation 饱和度的意思  图片在上下位移的时候 ，动态改变饱和度    motion:attributeName="Saturation" 从1变为0
+        // 什么是图像的饱和度？饱和度指的是图像的颜色的浓度，饱和度越高，颜色越饱满，饱和度越低，颜色就会显示的陈旧和惨淡，饱和度为0，图像就是灰色的图像
+        adapterItemBeans.add(new AdapterItemBean("ImageFilterView（2/2）","显示图像饱和度转换（使用ml的imagefilterview+自定义属性）",R.layout.motion_05_imagefilter));
+
+        //Keyframe Position
+        //关键帧 (position keyframes)，这里指定了在过渡进行到 50% 的时候，位置在屏幕高度的 25%处。 设置关键帧在进行到 50%的地方 ，y轴偏移为 往下为+ 往上是-
+        adapterItemBeans.add(new AdapterItemBean("关键帧位置（1/3）","使用简单的关键帧更改插值运动",R.layout.motion_06_keyframe));
+
+        //关键帧 (2/2), 属性(attribute)，加上了自身的旋转
+        adapterItemBeans.add(new AdapterItemBean("关键帧插值（2/3）","更复杂的关键帧，添加旋转插值",R.layout.motion_07_keyframe));
+
+        //关键帧 使用了抛物线的轨迹
+        adapterItemBeans.add(new AdapterItemBean("关键帧周期（3/3）","使用关键帧周期的基本示例",R.layout.motion_08_cycle));
+
+
+        //CoordinatorLayout Demo
+
+        adapterItemBeans.add(new AdapterItemBean("coordinatorlayout示例（1/3）","使用motion layout而不是appbarlayout的基本示例",R.layout.motion_09_coordinatorlayout));
+        //
         adapterItemBeans.add(new AdapterItemBean("coordinatorlayout example（2/3）","用多个元素和视差背景替换appbarlayout的稍复杂的motion layout示例",R.layout.motion_01_basic));
+        //
         adapterItemBeans.add(new AdapterItemBean("coordinatorlayout示例（3/3）","另一个appbarlayout替换示例",R.layout.motion_01_basic));
+        //
         adapterItemBeans.add(new AdapterItemBean("drawerlayout示例（1/2","带motion layout的基本drawerlayout",R.layout.motion_01_basic));
+        //
         adapterItemBeans.add(new AdapterItemBean("drawerlayout示例（2/2）","高级drawerlayout with motion layout",R.layout.motion_01_basic));
+        //
         adapterItemBeans.add(new AdapterItemBean("侧面板示例","侧面板，仅与motion layout一起实现",R.layout.motion_01_basic));
+        //
         adapterItemBeans.add(new AdapterItemBean("视差示例","视差背景”。拖动汽车。",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("VIEWPGER示例","Using MotionLayout with ViewPager",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("ViewPager Lottie Example","Using MotionLayout and Lottie with ViewPager",R.layout.motion_01_basic));

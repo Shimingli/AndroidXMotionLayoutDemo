@@ -26,6 +26,10 @@ dependencies {
     implementation "androidx.cardview:cardview:1.0.0"
     //Alpha版本
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    // 引入新的特性
+    implementation 'com.google.android.material:material:1.1.0-alpha05'
+
+
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'

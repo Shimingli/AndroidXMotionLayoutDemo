@@ -6,15 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+<!--Guideline是只能用在ConstraintLayout布局里面的一个工具类，
+用于辅助布局，类似为辅助线，
+可以设置android:orientation属性来确定是横向的还是纵向的。-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g0"
+        android:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="@color/clr_00FF95"
         app:layout_constraintGuide_percent="0.25"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="0dp" />
+        />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g1"
@@ -22,8 +25,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.41666666"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="0dp" />
+      />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g2"
@@ -31,8 +33,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5833333"
-        tools:layout_editor_absoluteX="345dp"
-        tools:layout_editor_absoluteY="0dp" />
+    />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g3"
@@ -40,8 +41,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.75"
-        tools:layout_editor_absoluteX="444dp"
-        tools:layout_editor_absoluteY="0dp" />
+   />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g4"
@@ -49,8 +49,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3333333"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="120dp" />
+   />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/g5"
@@ -59,8 +58,7 @@
         android:background="@color/colorPrimary"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.666667"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="239dp" />
+        />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/img1"
@@ -72,7 +70,7 @@
         android:layout_marginRight="4dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/colorAccent"
+        app:cardBackgroundColor="@color/clr_0084DB"
         app:cardCornerRadius="8dp"
         app:layout_constraintBottom_toTopOf="@+id/g4"
         app:layout_constraintLeft_toLeftOf="parent"
