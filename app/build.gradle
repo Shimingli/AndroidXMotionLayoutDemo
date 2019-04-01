@@ -22,6 +22,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //Alpha版本 需要测试的版本
     implementation 'androidx.appcompat:appcompat:1.1.0-alpha03'
+
+    implementation "androidx.cardview:cardview:1.0.0"
     //Alpha版本
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
     testImplementation 'junit:junit:4.12'

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--运动场景 MotionLayout links 到并需要MotionScene文件-->
+<MotionScene
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@layout/motion_01_cl_start"
+        motion:constraintSetEnd="@layout/motion_01_cl_end"
+        motion:duration="1000">
+        <!--拖动时-->
+        <OnSwipe
+            motion:touchAnchorId="@+id/button"
+            motion:touchAnchorSide="right"
+            motion:dragDirection="dragRight" />
+    </Transition>
+
+</MotionScene>
