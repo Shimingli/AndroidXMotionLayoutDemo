@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:transformPivotX="0dp"
         android:transformPivotY="0dp"
-        android:text="你好呀"
+        android:text="记得向左拉动试试"
         android:textColor="#FFF"
         android:textSize="32sp" />
 

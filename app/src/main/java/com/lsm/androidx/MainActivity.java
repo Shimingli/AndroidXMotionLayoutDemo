@@ -61,16 +61,20 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         //      app:fontFamily="cursive" 字体的设置
         // layout_constraintBaseline_toBaselineOf 我个人理解就是这个文字要和 label 这一行在同一行
         //             layout_constraint（本组件的部位）_to（建立连接的组件部位）Of：（建立连接的id）
+        adapterItemBeans.add(new AdapterItemBean("coordinatorlayout 示例（2/3）","用多个元素和视差背景替换appbarlayout的稍复杂的motion layout示例",R.layout.motion_10_coordinatorlayout));
 
-        adapterItemBeans.add(new AdapterItemBean("coordinatorlayout example（2/3）","用多个元素和视差背景替换appbarlayout的稍复杂的motion layout示例",R.layout.motion_10_coordinatorlayout));
-        //
-        adapterItemBeans.add(new AdapterItemBean("coordinatorlayout示例（3/3）","另一个appbarlayout替换示例",R.layout.motion_01_basic));
-        //
-        adapterItemBeans.add(new AdapterItemBean("drawerlayout示例（1/2","带motion layout的基本drawerlayout",R.layout.motion_01_basic));
-        //
-        adapterItemBeans.add(new AdapterItemBean("drawerlayout示例（2/2）","高级drawerlayout with motion layout",R.layout.motion_01_basic));
-        //
-        adapterItemBeans.add(new AdapterItemBean("侧面板示例","侧面板，仅与motion layout一起实现",R.layout.motion_01_basic));
+
+        // 使用drawable的xml文件和View.setClipToOutline()制作圆形ImageView  但是要谨慎的使用
+        adapterItemBeans.add(new AdapterItemBean("coordinatorlayout示例（3/3）","另一个 AppBarLayout 替换示例",R.layout.motion_11_coordinatorlayout));
+
+        // 抽屉布局 记得往右拉动，一个很复杂的布局动画 牛逼
+        adapterItemBeans.add(new AdapterItemBean("drawerlayout示例（1/2）","DrawerLayout MotionLayout",R.layout.motion_12_drawerlayout));
+        // 这个动画做的不太一样，从旋转的方向看不一样
+        adapterItemBeans.add(new AdapterItemBean("drawerlayout示例（2/2）","Advanced DrawerLayout with motionlayout",R.layout.motion_13_drawerlayout));
+
+        // 侧板的信息栏，这里是可以展示侧边的抽屉框。但是不知道有什么用处 MockView MockView
+        adapterItemBeans.add(new AdapterItemBean("侧面板示例","侧面板，仅与motion layout一起实现",R.layout.motion_14_side_panel));
+
         //
         adapterItemBeans.add(new AdapterItemBean("视差示例","视差背景”。拖动汽车。",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("VIEWPGER示例","Using MotionLayout with ViewPager",R.layout.motion_01_basic));
