@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.lsm.androidx.viewPager.ViewPagerActivity;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
@@ -75,9 +77,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         // 侧板的信息栏，这里是可以展示侧边的抽屉框。但是不知道有什么用处 MockView MockView
         adapterItemBeans.add(new AdapterItemBean("侧面板示例","侧面板，仅与motion layout一起实现",R.layout.motion_14_side_panel));
 
-        //
-        adapterItemBeans.add(new AdapterItemBean("视差示例","视差背景”。拖动汽车。",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("VIEWPGER示例","Using MotionLayout with ViewPager",R.layout.motion_01_basic));
+        // 就是使用 新的特性控制下，拖拽的效果
+        adapterItemBeans.add(new AdapterItemBean("视差示例","视差背景”。拖动汽车。",R.layout.motion_15_parallax));
+        // ViewPagerActivity  和Viewpager使用的实例
+        adapterItemBeans.add(new AdapterItemBean("VIEWPGER示例","Using MotionLayout with ViewPager", ViewPagerActivity.class));
+
         adapterItemBeans.add(new AdapterItemBean("ViewPager Lottie Example","Using MotionLayout and Lottie with ViewPager",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("复杂运动示例（1/4）","基本协调布局类行为。仅使用motionlayout实现，使用移动指南。注意，视图没有调整大小。",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("复杂运动示例（2/4）","高级协调布局类似行为（添加FAB）”。仅使用motionlayout实现，使用移动指南。注意，视图没有调整大小。",R.layout.motion_01_basic));
