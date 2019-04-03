@@ -10,7 +10,9 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.lsm.androidx.fragment.FragmentExampleActivity;
 import com.lsm.androidx.viewPager.ViewPagerActivity;
+import com.lsm.androidx.viewPager.ViewPagerActivity2;
 
 import java.util.ArrayList;
 
@@ -81,13 +83,24 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         adapterItemBeans.add(new AdapterItemBean("视差示例","视差背景”。拖动汽车。",R.layout.motion_15_parallax));
         // ViewPagerActivity  和Viewpager使用的实例
         adapterItemBeans.add(new AdapterItemBean("VIEWPGER示例","Using MotionLayout with ViewPager", ViewPagerActivity.class));
+         //lottie是一个面向Android和iOS的移动库，它解析导出为带有bodymovin的json格式的Adobe After Effects动画，并在移动设备上进行本地渲染！
+        //第一次，设计师可以创造和发送美丽的动画，而无需一个工程师刻意用手重新创造。他们说一张图片值1000个字，所以这里有13000个：
+        adapterItemBeans.add(new AdapterItemBean("ViewPager Lottie Example","Using MotionLayout and Lottie with ViewPager", ViewPagerActivity2.class));
 
-        adapterItemBeans.add(new AdapterItemBean("ViewPager Lottie Example","Using MotionLayout and Lottie with ViewPager",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（1/4）","基本协调布局类行为。仅使用motionlayout实现，使用移动指南。注意，视图没有调整大小。",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（2/4）","高级协调布局类似行为（添加FAB）”。仅使用motionlayout实现，使用移动指南。注意，视图没有调整大小。",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（3/4）","高级协调布局类似行为（添加FAB）",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（4/4）","高级同步reval运动+助手（反弹）",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("片段转换示例（1/2）","显示MODISPLAY布局中的转换片段”的示例",R.layout.motion_01_basic));
+        //其实就是给一个图形花了一个对角线的东西
+        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（1/4）","基本协调布局类行为。仅使用motionlayout实现，使用移动指南。注意，视图没有调整大小。",R.layout.motion_17_coordination));
+
+        // 配合着 FloatingActionButton 使用 这个控件的动画是由谁来控制的呢？是由secen_18 控制的
+        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（2/4）","高级协调布局类似行为（添加FAB）”。仅使用motionlayout实现，使用移动指南。注意，视图没有调整大小。",R.layout.motion_18_coordination));
+        // 配合着 FloatingActionButton 使用  视图发生了放大的效果
+        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（3/4）","高级协调布局类似行为（添加FAB），视图调整了大小",R.layout.motion_19_coordination));
+        // 这个动画比较炫酷哦
+        adapterItemBeans.add(new AdapterItemBean("复杂运动示例（4/4）","高级同步reval运动+助手（反弹）",R.layout.motion_20_reveal));
+
+        // MotionLayout 是实现这个接口的 NestedScrollingParent2 animator 和 anim的区别？？？？？？
+        // 这种新的特性我一定要利用起来啊
+        adapterItemBeans.add(new AdapterItemBean("片段转换示例（1/2）","显示MODISPLAY布局中的转换片段”的示例", FragmentExampleActivity.class));
+
         adapterItemBeans.add(new AdapterItemBean("片段转换示例（2/2）","显示MODISPLAY布局中的转换片段”的示例",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("YouTube类运动示例","显示像YouTube一样的过渡示例",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("使用keytrigger的示例","使用keytrigger调用方法的示例",R.layout.motion_01_basic));

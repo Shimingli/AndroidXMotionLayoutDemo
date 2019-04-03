@@ -51,6 +51,31 @@ public class DemoActivity extends AppCompatActivity {
             }
         }
 
+        View viewById = findViewById(R.id.imageButton2);
+        // 复杂运动示例（4/4） 这是这个的点击事件
+        if (viewById!=null){
+            viewById.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mMotionLayout instanceof MotionLayout){
+                        float progress = ((MotionLayout) mMotionLayout).getProgress();
+                        if (progress>0.5f){
+                            ((MotionLayout) mMotionLayout).transitionToStart();
+                        }else{
+                            ((MotionLayout) mMotionLayout).transitionToEnd();
+                        }
+                    }
+                }
+            });
+        }
+
+    }
+
+
+    /**
+     *
+     */
+    public void changeState(){
 
     }
 }

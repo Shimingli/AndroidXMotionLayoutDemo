@@ -20,6 +20,8 @@
         <activity android:name=".DemoActivity"/>
         <activity android:name=".ConstraintLayoutActivityDemo"/>
         <activity android:name=".viewPager.ViewPagerActivity"/>
+        <activity android:name=".viewPager.ViewPagerActivity2"/>
+        <activity android:name=".fragment.FragmentExampleActivity"/>
     </application>
 
 </manifest>
