@@ -54,7 +54,7 @@
             motion:layout_constraintBottom_toBottomOf="parent">
             <CustomAttribute
                 motion:attributeName="BackgroundColor"
-                motion:customColorValue="@color/clr_00FF95" />
+                motion:customColorValue="#99fff0af" />
         </Constraint>
     </ConstraintSet>
 

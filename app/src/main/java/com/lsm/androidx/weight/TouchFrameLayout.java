@@ -58,9 +58,17 @@ public class TouchFrameLayout extends FrameLayout implements NestedScrollingPare
         getMotionLayout().onNestedScrollAccepted(child, target, axes, type);
     }
 
+    /**
+     * https://github.com/googlesamples/android-ConstraintLayoutExamples/issues/75
+     * 谷歌的错误代码
+     * @param target
+     * @param type
+     */
     @Override
     public void onStopNestedScroll(@NonNull View target, int type) {
-        getMotionLayout().onStopNestedScroll(target, type);
+        if (getMotionLayout()!=null) {
+            getMotionLayout().onStopNestedScroll(target, type);
+        }
     }
 
     @Override

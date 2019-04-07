@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.lsm.androidx.fragment.FragmentExample2Activity;
 import com.lsm.androidx.fragment.FragmentExampleActivity;
 import com.lsm.androidx.viewPager.ViewPagerActivity;
 import com.lsm.androidx.viewPager.ViewPagerActivity2;
@@ -100,8 +101,15 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
         // MotionLayout 是实现这个接口的 NestedScrollingParent2 animator 和 anim的区别？？？？？？
         // 这种新的特性我一定要利用起来啊
         adapterItemBeans.add(new AdapterItemBean("片段转换示例（1/2）","显示MODISPLAY布局中的转换片段”的示例", FragmentExampleActivity.class));
+        //使用动画，开启一个fragment 然后这个fragment中有一个list条目，点击这item，开启itemfragment，然后呢，
+        // 中间这个listFragment就自动关闭了，慢慢的拖动，也可以返回到上一个fragment，下一个使用这个效果，很有意思哦
+        // 谷歌的Demo有两处的错误 ，我提了 issues
+        // https://github.com/googlesamples/android-ConstraintLayoutExamples/issues/76
+        // https://github.com/googlesamples/android-ConstraintLayoutExamples/issues/75
 
-        adapterItemBeans.add(new AdapterItemBean("片段转换示例（2/2）","显示MODISPLAY布局中的转换片段”的示例",R.layout.motion_01_basic));
+        adapterItemBeans.add(new AdapterItemBean("片段转换示例（2/2）","显示MODISPLAY布局中的转换片段”的示例", FragmentExample2Activity.class));
+
+
         adapterItemBeans.add(new AdapterItemBean("YouTube类运动示例","显示像YouTube一样的过渡示例",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("使用keytrigger的示例","使用keytrigger调用方法的示例",R.layout.motion_01_basic));
         adapterItemBeans.add(new AdapterItemBean("使用多状态的示例","在多状态之间转换的示例",R.layout.motion_01_basic));
