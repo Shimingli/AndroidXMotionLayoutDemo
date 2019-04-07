@@ -14,6 +14,7 @@ import com.lsm.androidx.fragment.FragmentExample2Activity;
 import com.lsm.androidx.fragment.FragmentExampleActivity;
 import com.lsm.androidx.viewPager.ViewPagerActivity;
 import com.lsm.androidx.viewPager.ViewPagerActivity2;
+import com.lsm.androidx.youtubedemo.YouTubeDemoActivity;
 
 import java.util.ArrayList;
 
@@ -109,10 +110,13 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
         adapterItemBeans.add(new AdapterItemBean("片段转换示例（2/2）","显示MODISPLAY布局中的转换片段”的示例", FragmentExample2Activity.class));
 
+        //BottomNavigationView 这个导航栏的使用，复杂的动画效果
+        adapterItemBeans.add(new AdapterItemBean("YouTube类运动示例","显示像YouTube一样的过渡示例", YouTubeDemoActivity.class));
 
-        adapterItemBeans.add(new AdapterItemBean("YouTube类运动示例","显示像YouTube一样的过渡示例",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("使用keytrigger的示例","使用keytrigger调用方法的示例",R.layout.motion_01_basic));
-        adapterItemBeans.add(new AdapterItemBean("使用多状态的示例","在多状态之间转换的示例",R.layout.motion_01_basic));
+//        未完
+//        adapterItemBeans.add(new AdapterItemBean("使用keytrigger的示例","使用keytrigger调用方法的示例",R.layout.motion_25_keytrigger));
+//
+//        adapterItemBeans.add(new AdapterItemBean("使用多状态的示例","在多状态之间转换的示例",R.layout.motion_26_multistate));
 
         DemosAdapter demosAdapter = new DemosAdapter(adapterItemBeans);
         mRecyclerView.setAdapter(demosAdapter);
