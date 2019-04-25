@@ -61,9 +61,11 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
 
 
         //CoordinatorLayout Demo
-        // NestedScrollView 即 支持嵌套滑动的 ScrollView。比如一个 ScrollView 内部包裹一个 RecyclerView，那么就会产生滑动冲突，这个问题就需要你自己去解决。而如果使用 NestedScrollView 包裹 RecyclerView，嵌套滑动天然支持，你无需做什么就可以实现前面想要实现的功能了。
+        // NestedScrollView 即 支持嵌套滑动的 ScrollView。比如一个 ScrollView 内部包裹一个 RecyclerView，那么就会产生滑动冲突，这个问题就需要你自己去解决。
+        // 而如果使用 NestedScrollView 包裹 RecyclerView，嵌套滑动天然支持，你无需做什么就可以实现前面想要实现的功能了。
          //CollapsibleToolbar 是把位移的监听 直接放到自己的类来了，可以很方便的节约性能，这种方式定义自定义控件有很好的效果
         adapterItemBeans.add(new AdapterItemBean("coordinatorlayout示例（1/3）","使用motion layout而不是appbarlayout的基本示例",R.layout.motion_09_coordinatorlayout));
+
         //      app:fontFamily="cursive" 字体的设置
         // layout_constraintBaseline_toBaselineOf 我个人理解就是这个文字要和 label 这一行在同一行
         //             layout_constraint（本组件的部位）_to（建立连接的组件部位）Of：（建立连接的id）

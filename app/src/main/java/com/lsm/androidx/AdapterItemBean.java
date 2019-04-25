@@ -22,6 +22,7 @@ public class AdapterItemBean {
         this.clazz = clazz;
     }
 
+    //指定默认的那个的Activity
     private  Class clazz=DemoActivity.class;
 
     public String getTitle() {

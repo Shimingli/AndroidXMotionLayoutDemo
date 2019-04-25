@@ -51,6 +51,5 @@ public class CollapsibleToolbar extends MotionLayout implements AppBarLayout.OnO
         setProgress((float)-verticalOffset/appBarLayout.getTotalScrollRange());
         Log.d("CollapsibleToolbar","appBarLayout.getTotalScrollRange()="+appBarLayout.getTotalScrollRange());
         Log.d("CollapsibleToolbar","verticalOffset="+verticalOffset);
-
     }
 }

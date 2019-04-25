@@ -68,7 +68,7 @@
         android:layout_marginTop="8dp"
         android:text="A bunch of extra information"
         android:textColor="@color/clr_00FF95"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
